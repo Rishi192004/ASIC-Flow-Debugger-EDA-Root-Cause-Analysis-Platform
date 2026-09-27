@@ -1,0 +1,15 @@
+Metadata-Version: 2.4
+Name: flowctl
+Version: 0.1.0
+Summary: ASIC flow automation CLI tool
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: click>=8.0
+Requires-Dist: pyyaml>=6.0
+Requires-Dist: pydantic>=2.0
+Requires-Dist: jinja2>=3.0
+Requires-Dist: rich>=13.0
+
+# ASIC Master Flow Automation
+
+A Python-based CLI framework (`flowctl`) for orchestrating end-to-end ASIC verification and synthesis workflows with open-source tools.

@@ -9,12 +9,16 @@ description = "ASIC flow automation CLI tool"
 readme = "README.md"
 requires-python = ">=3.9"
 dependencies = [
-    "click",
-    "pyyaml",
-    "pydantic",
-    "jinja2",
-    "rich",
+    "click>=8.0",
+    "pyyaml>=6.0",
+    "pydantic>=2.0",
+    "jinja2>=3.0",
+    "rich>=13.0",
 ]
 
 [project.scripts]
 flowctl = "flowctl.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["flowctl*"]

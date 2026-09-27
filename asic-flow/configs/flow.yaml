@@ -1,23 +1,24 @@
-# ASIC Flow Configuration Example
-name: counter_flow
-version: 1.0
+project: my_design
 
-design:
-  top_module: counter
-  rtl_sources:
-    - examples/rtl/counter.v
+rtl:
+  sources:
+    - examples/rtl/*.sv
+  top: alu_top
 
 stages:
-  - name: lint
-    tool: verible
-    enabled: true
+  - lint
+  - sim
+  - synth
+  - report
 
-  - name: sim
-    tool: verilator
-    testbench: examples/rtl/tb_counter.cpp
-    enabled: true
-
-  - name: synth
-    tool: yosys
+tools:
+  lint:
+    adapter: verible
+  sim:
+    adapter: verilator
+    testbench: examples/rtl/alu_tb.sv
+  synth:
+    adapter: yosys
     target: generic
-    enabled: true
+  report:
+    adapter: report
