@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "flowctl"
+version = "0.1.0"
+description = "ASIC flow automation CLI tool"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "click",
+    "pyyaml",
+    "pydantic",
+    "jinja2",
+    "rich",
+]
+
+[project.scripts]
+flowctl = "flowctl.cli:main"
